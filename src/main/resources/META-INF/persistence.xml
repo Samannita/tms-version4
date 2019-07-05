@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+   http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+   
+   <persistence-unit name="oracle" transaction-type="RESOURCE_LOCAL">
+   
+      <class>com.cg.tms.entity.Program</class>
+       <class>com.cg.tms.entity.Course</class>
+       <class>com.cg.tms.beans.Trainer</class>
+       <class>com.cg.tms.entity.Center</class>
+       <class>com.cg.tms.entity.Student</class>
+       <class>com.cg.tms.entity.Address</class>
+        <class>com.cg.tms.entity.Roles</class>
+       
+
+      <properties>
+         <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+         <property name="javax.persistence.jdbc.user" value="sys as sysdba"/>
+         <property name="javax.persistence.jdbc.password" value="system"/>
+         <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver"/>
+         <property name="eclipselink.logging.level" value="FINE"/>
+         <property name="hibernate.format_sql" value="true"/>
+		<property name="hibernate.hbm2ddl.auto" value="update"/>
+       <!--    <property name="eclipselink.ddl-generation" value="create-tables"/> -->
+      </properties>
+      
+   </persistence-unit>
+</persistence>
